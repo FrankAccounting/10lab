@@ -22,9 +22,13 @@ that derived classes (e.g. KeyboardReader, FileReader) must be usable
 through their base class interfaces (Reader and Writer), without the client
 (in this case, Copier) being able to tell the difference.
 
-INSTRUCTIONS: When using FileReader, make sure you have a plain
-text file named "data.txt" in the default file location of your IDE of choice.
-This file should contain one line of text.
+HOW TO USE: Run the main in Driver.java. Comment and uncomment various
+combinations of Writer and Reader implementations and note the effects of 
+polymorphism.
 
-If you are using FileWriter, the program will create "datacopy.txt" in the default
-directory.
+When using FileReader, make sure you have a plain text file named "data.txt"
+in the default file location of your IDE of choice. This file should contain
+at least one line of text.
+
+If you are using FileWriter, the program will create "datacopy.txt" in the
+default directory.

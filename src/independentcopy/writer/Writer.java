@@ -1,4 +1,4 @@
-package independentcopy;
+package independentcopy.writer;
 
 /**
  * A simple interface (abstraction) to be used by all derived classes that need
@@ -15,7 +15,6 @@ package independentcopy;
  */
 public interface Writer {
 
-    // you do not need the "abstract" keyword because it is implicit
-    // just implement this interface and create your own derived class implementation
-    public abstract void writeln(String line);
+    // implement this interface and create your own derived class implementation
+    public void writeln(String line);
 }

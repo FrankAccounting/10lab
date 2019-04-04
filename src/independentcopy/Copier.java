@@ -1,5 +1,8 @@
 package independentcopy;
 
+import independentcopy.writer.Writer;
+import independentcopy.reader.Reader;
+
 /**
  * This class has only dependencies to abstractions, not to details (concrete
  * classes). See how the Copier method does not depend on any specific concrete

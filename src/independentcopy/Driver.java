@@ -1,5 +1,8 @@
 package independentcopy;
 
+import independentcopy.reader.*;
+import independentcopy.writer.*;
+
 /**
  * @author Jim Lombardo, WCTC Lead Java Instructor
  * @version 1.02
@@ -9,20 +12,25 @@ package independentcopy;
 public class Driver {
 
     public static void main(String[] args) {
-        // Uncomment this out (and comment following reader/writer)
-        // to see how switching objects causes no problems with
-        // Copier class because it's Polymorphic!!!
-        Reader reader = new KeyboardReader();
-        Writer writer = new ConsoleWriter();
+        /*
+         Comment/uncomment various combinations of Reader
+         and Writer classes to see how switching objects
+         causes no problems with Copier class because it's
+         polymorphic!!!
+         */
 
-        // Comment this out (and uncomment preceeding reader/writer)
-        // to see how switching objects causes no problems with
-        // Copier class because it's Polymorphic!!!
-        //       Reader reader = new FileReader();
-        //       Writer writer = new GuiWriter();
-        // Copy from reader to writer
-        // Notice that Copier is NOT dependent on implementation of reader/writer
-        // (it is not rigid, fragile or immobile)
+        Reader reader = new KeyboardReader();
+        //Reader reader = new FileReader();
+
+        Writer writer = new ConsoleWriter();
+        //Writer writer = new GuiWriter();
+        //Writer writer = new FileWriter();
+
+        /*
+        Copy from reader to writer
+        Notice that Copier is NOT dependent on implementation of reader/writer
+        (it is not rigid, fragile or immobile)
+         */
         Copier copier = new Copier(reader, writer);
         copier.copy();
 

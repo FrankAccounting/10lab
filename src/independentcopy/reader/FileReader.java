@@ -1,4 +1,4 @@
-package independentcopy;
+package independentcopy.reader;
 
 import java.io.*;
 
@@ -17,17 +17,12 @@ public class FileReader implements Reader {
     private boolean lineReadFlag = false;
 
     /**
-     * Read a line of input from a file at the root of the classpath
+     * Read a line of input from a file
      *
      * @see Reader#readln()
      */
+    @Override
     public String readln() {
-        // Do this if locating data file in project
-//		File data = new File("build" + File.separator + "classes"
-//                        + File.separator + "data.txt");
-
-        // Do this if locating data file outside of project (preferred)
-        // File is located at the root of the root drive (likely "E" in class)
         File data = new File("data.txt");
 
         BufferedReader in = null;
@@ -36,7 +31,7 @@ public class FileReader implements Reader {
         try {
             if (data.exists()) {
                 // make sure we differentiate between java.io.FileReader
-                // class and this custom FileReader class
+                // class and this class (also called FileReader)
                 in = new BufferedReader(new java.io.FileReader(data));
                 line = in.readLine();
                 in.close();

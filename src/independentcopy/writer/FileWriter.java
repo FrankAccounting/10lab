@@ -1,11 +1,11 @@
-package independentcopy;
+package independentcopy.writer;
 
 import java.io.*;
 
 /**
  * A simple low-level, derived class that demonstrates the capability to write a
  * line of input to a file. Notice this class is derived from the interface
- * <code>Reader</code>, which is an abstraction of these details.
+ * <code>Writer</code>, which is an abstraction of these details.
  *
  * @author Jim Lombardo, WCTC Lead Java Instructor
  * @version 1.02
@@ -19,6 +19,7 @@ public class FileWriter implements Writer {
      *
      * @see Writer#writeln()
      */
+    @Override
     public void writeln(String line) {
         boolean append = false;
         File data = new File("datacopy.txt");
@@ -28,7 +29,7 @@ public class FileWriter implements Writer {
         // new java.io.FileWriter() creates the file if doesn't exit
         try {
             // make sure we differentiate between java.io.FileWriter
-            // class and this custom FileWriter class
+            // class and this class, also called FileWriter
             out = new PrintWriter(
                     new BufferedWriter(
                             new java.io.FileWriter(data, append)));

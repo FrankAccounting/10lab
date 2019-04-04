@@ -1,4 +1,4 @@
-package independentcopy;
+package independentcopy.writer;
 
 import javax.swing.JOptionPane;
 
@@ -20,6 +20,7 @@ public class GuiWriter implements Writer {
      * @param line - a String representing one line of text.
      * @see Writer#writeln()
      */
+    @Override
     public void writeln(String line) {
         JOptionPane.showMessageDialog(null, line);
     }

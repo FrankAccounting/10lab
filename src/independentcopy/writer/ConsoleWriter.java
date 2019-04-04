@@ -1,4 +1,4 @@
-package independentcopy;
+package independentcopy.writer;
 
 /**
  * A simple class that demonstrates a capability to write a line of text to the
@@ -18,6 +18,7 @@ public class ConsoleWriter implements Writer {
      * @param line - a String representing one line of text.
      * @see Writer#writeln()
      */
+    @Override
     public void writeln(String line) {
         System.out.println("Here is the text you entered, which I've copied below.");
         System.out.println(line);

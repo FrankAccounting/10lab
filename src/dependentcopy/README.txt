@@ -25,6 +25,5 @@ the difference. That isn't true here! The object class does not have the
 methods readln() and writeln() which are in KeyboardReader and KeyboardWriter
 respectively.
 
-INSTRUCTIONS: To run this from NetBeans, run the main in Driver.java. Type in
-some text at the console, then press return. The text will be copied to
-the output console.
+HOW TO USE: Run the main in Driver.java. Type in some text at the console,
+then press return. The text will be copied to the output console.

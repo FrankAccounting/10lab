@@ -1,4 +1,4 @@
-package independentcopy;
+package independentcopy.reader;
 
 import java.util.Scanner;
 
@@ -19,6 +19,7 @@ public class KeyboardReader implements Reader {
      *
      * @return a String representing one line of input.
      */
+    @Override
     public String readln() {
         System.out.println("Please enter some text, then press return:");
 
